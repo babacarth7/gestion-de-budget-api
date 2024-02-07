@@ -19,7 +19,7 @@ const create = async (req, res) => {
 // Récupérer la liste des transactions
 const list = async (req, res) => {
     try {
-        const transactions = await Transaction.find().select('titre description montant ajout');
+        const transactions = await Transaction.find().select('titre description montant ajouter');
         res.json(transactions);
     } catch (error) {
         console.error(error);
